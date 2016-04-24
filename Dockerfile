@@ -1,5 +1,5 @@
 FROM ubuntu:latest
 
 RUN apt-get -y install openssh-server
-RUN systemctl start ssh
+RUN service ssh start
 CMD tail -f /var/log/auth.log
